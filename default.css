@@ -7,18 +7,19 @@ html{
 }
 
 h1{
-    /*font-size: 2em;*/
-    font-size: 2rem;
+    /*font-size: 2em;
+    font-size: 2rem;*/
 }
 span{
     /*font-size: 0.5em;*/
     font-size: 0.5rem;
 }
+/*
 div{
     width: 100px;
     height: 50px;
 }
-/*明度・彩度を規定できるhsl(hsla)*/
+明度・彩度を規定できるhsl(hsla)*/
 #box1{
     background: rgb(255, 100, 100);
 }
@@ -32,8 +33,8 @@ div{
     background: hsla(210, 100%, 40%,.7);
 }
 img{
-    border: 7px solid blue;
-    opacity: 0.3;
+    /*border: 7px solid blue;
+    opacity: 0.3;*/
 }
 /*
 -a [href^="foo"]・・・fooから始まる
@@ -74,19 +75,19 @@ li:nth-child(3n+1){
 }
 最後から数える時はnth-last-child
 子要素が一つしかない時はonly-child
-*/
+
 li:nth-last-child(4){
     background: blue;
 }
 li:only-child{
     background: violet;
 }
-/*
+
 :nth-of-type()
 隣接していない場合でも、何番目に適用するかを決める
 p:first-of-type
 p:last-of-type
-*/
+
 p:nth-of-type(2){
     background: violet;
 }
@@ -95,4 +96,90 @@ p:nth-last-of-type(2){
 }
 h2:only-of-type{
     background: blue;
+}
+li:not(.target){
+    background: violet;
+}
+li:empty{
+    background: gray;
+}
+*/
+input[type="text"]:enabled{
+    background: violet;
+}
+input[type="checkbox"]:checked + label{
+    background: skyblue;
+}
+
+/*div{
+    width: 400px;
+    height:400px;
+    background: url(sheep2.jpg) center center;
+    border-radius: 10px;
+    border-radius: 50%;
+}
+*/
+.radius{
+    border-radius: 100%;
+}
+header{
+ /*    width: 100%;
+    height: 1000px;
+    background: url('cafe.jpg') no-repeat 0 0,
+    url('sheep.jpg') no-repeat 30px 30px,
+    url('sheep2.jpg') no-repeat bottom right;
+   background-image: url(cafe.jpg);
+    background-repeat: repeat-x;
+    background-size: 40% cover;
+*/
+}
+/*div{
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(to top left, skyblue,blue);
+    background-image: linear-gradient(lightgreen 10%,skyblue 70%,blue);
+    background-image: repeating-linear-gradient(lightgreen,skyblue 20px);
+
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    background-image: radial-gradient(ellipse 20px 20px at 30px 40px,skyblue,blue);
+
+}
+box-shadow
+text-shadow
+
+div{
+    width: 200px;
+    height: 100px;
+    background: #fff;
+    box-shadow: 10px 20px 4px 10px rgba(0, 0, 0, .4) inset,
+    10px 20px 4px 10px skyblue;
+}
+h1{
+    text-shadow: 1px 2px 0 skyblue;
+}
+*/
+div{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+
+}
+#box10{
+    background: skyblue;
+    opacity: .5;
+}
+#box11{
+    background: orange;
+    opacity: .5;
+    /*transform: translate(20px,40px)
+    transform: skew(10deg,20deg);*/
+    transform: rotate(30deg);
+    transform-origin: 0 0;
 }
