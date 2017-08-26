@@ -1,3 +1,98 @@
 /*
 
 */
+
+html{
+    font-size: 32px;
+}
+
+h1{
+    /*font-size: 2em;*/
+    font-size: 2rem;
+}
+span{
+    /*font-size: 0.5em;*/
+    font-size: 0.5rem;
+}
+div{
+    width: 100px;
+    height: 50px;
+}
+/*明度・彩度を規定できるhsl(hsla)*/
+#box1{
+    background: rgb(255, 100, 100);
+}
+#box2{
+    background: rgba(255, 100, 100,.2);
+}
+#box3{
+    background: hsla(210, 100%, 50%,.7);
+}
+#box4{
+    background: hsla(210, 100%, 40%,.7);
+}
+img{
+    border: 7px solid blue;
+    opacity: 0.3;
+}
+/*
+-a [href^="foo"]・・・fooから始まる
+-a [href$="foo"]・・・fooで終わる
+-a [href*="foo"]・・・fooを含む
+*/
+a[href^="http"]{
+    color: orange;
+}
+a[href$=".com"]{
+    color: green;
+}
+a[href*="page"]{
+    color: gray;
+}
+/*
+擬似クラス
+:nth-child()
+何番目の子要素に適用するか
+
+li:last-child{
+    background: violet;
+}
+li:nth-child(3){
+    background: blue;
+}
+odd:三文字なので奇数　even:四文字なので偶数
+
+li:nth-child(odd){
+    background: blue;
+}
+li:nth-child(even){
+    background: violet;
+}
+nを使って指定も可能
+li:nth-child(3n+1){
+    background: blue;
+}
+最後から数える時はnth-last-child
+子要素が一つしかない時はonly-child
+*/
+li:nth-last-child(4){
+    background: blue;
+}
+li:only-child{
+    background: violet;
+}
+/*
+:nth-of-type()
+隣接していない場合でも、何番目に適用するかを決める
+p:first-of-type
+p:last-of-type
+*/
+p:nth-of-type(2){
+    background: violet;
+}
+p:nth-last-of-type(2){
+    background: violet;
+}
+h2:only-of-type{
+    background: blue;
+}
