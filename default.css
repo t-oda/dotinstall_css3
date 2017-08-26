@@ -161,7 +161,7 @@ div{
 h1{
     text-shadow: 1px 2px 0 skyblue;
 }
-*/
+
 div{
     width: 100px;
     height: 100px;
@@ -171,6 +171,7 @@ div{
     left: 100px;
 
 }
+
 #box10{
     background: skyblue;
     opacity: .5;
@@ -178,8 +179,78 @@ div{
 #box11{
     background: orange;
     opacity: .5;
-    /*transform: translate(20px,40px)
-    transform: skew(10deg,20deg);*/
+    transform: translate(20px,40px)
+    transform: skew(10deg,20deg);
     transform: rotate(30deg);
     transform-origin: 0 0;
+}
+transitionについて
+div{
+    width: 100px;
+    height: 50px;
+    background: skyblue;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    transition-delay: 0.8s;
+}
+div:hover{
+    width: 200px;
+    height: 50px;
+    background: blue;
+    
+}
+
+div{
+    width: 50px;
+    height: 50px;
+    background: skyblue;
+    -webkit-animation-name: slidein;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease; 
+    -webkit-animation-delay: .1s; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+
+}
+@-webkit-keyframes slidein{
+    0%{
+        margin-left: 100%;
+        background: white;
+
+    }
+    70%{
+        margin-left: 50%;
+        background: blue;
+    
+    }
+    100%{
+        margin-left: 0%;
+
+    }
+}
+*/
+body{
+    margin: 0;
+    padding: 0;
+
+}
+.conteiner{
+    width: 320px;
+    height: 100px;
+    background: skyblue;
+
+}
+.box{
+    box-sizing: border-box;
+
+    width: 100px;
+    height: 100px;
+    background: #eee;
+    float: left;
+    padding: 10px;
+    border-bottom: 10px solid #ccc;
+}
+.box + .box{
+    margin-left: 10px;
 }
